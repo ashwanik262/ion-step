@@ -1,0 +1,45 @@
+<ion-header no-border>
+  <ion-navbar>
+    <ion-title> <img style=" width: 10%" src="assets/imgs/footsteps.svg">Footstep Counter </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home" padding>
+
+  <ion-row class="totalcall-row">
+    <div>
+      <div class="progressBarText" style="color: white">
+          <span style="font-size: 15px;margin-top: 5px" sty>Goal: {{goal}}</span>
+        <br>
+        {{numberOfSteps}} 
+        <br>
+        <span style="font-size: 20px;margin-bottom: 5px">Steps</span>
+      </div>
+      <round-progress [current]="numberOfSteps" [radius]="90" [color]="'#00FFFF'" [stroke]="5" [max]="goal"
+        [duration]="800"></round-progress>
+    </div>
+    
+  </ion-row>
+  <ion-row>
+      <div class="playbox">
+          <ion-icon style="margin-top: 15px;color:aqua;font-size: 1.5em;" *ngIf="!isStart"  (click)="start()" name="play"></ion-icon>
+          <ion-icon style="margin-top: 15px;font-size: 1.5em;" *ngIf="isStart" (click)="stop()" name="pause"></ion-icon>
+        </div>
+      </ion-row>
+  
+  <ion-row style="margin-top: 30px">
+    <ion-col col-4>
+      <img style=" width: 40%" src="assets/imgs/calories.svg">
+
+    </ion-col>
+    <ion-col col-4>
+        <img style=" width: 40%" src="assets/imgs/distance.svg">
+      
+    </ion-col>
+    <ion-col col-4>
+        <img style=" width: 40%" src="assets/imgs/circular-clock.svg">
+      
+    </ion-col>
+  </ion-row>
+ 
+</ion-content>

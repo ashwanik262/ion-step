@@ -8,7 +8,7 @@
 ~~~~
 - Move into the freshly cloned directory and install all dependencies
 ~~~~
-    cd ion-weather
+    cd ion-step
     npm i
 ~~~~
 
